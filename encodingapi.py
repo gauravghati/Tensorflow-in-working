@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.preprocessing.sequenc import pad_sequences
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 sentence = [							# vocab corpus
 	'I love my cat',
@@ -16,8 +16,11 @@ tokenizer.fit_on_texts(sentence)
 word_index = tokenizer.word_index
 sequence = tokenizer.texts_to_sequences(sentence)
 
-print(word_index)
-print(sequence)
+print("word Index: ", word_index)
+print("train Sequence: ", sequence)
+
+padded = pad_sequences(sequence) 
+print("train Padding: ", padded)
 
 test_data = [
 	'i really love my dog!',
@@ -25,7 +28,24 @@ test_data = [
 ]
 
 sequence = tokenizer.texts_to_sequences(test_data)
-print(sequence)
+print("test Sequence: ", sequence)
 
 padded = pad_sequences(sequence)  	# padding -> padding="post" or maxlen=5 or  truncating="post"
-print(padded)
+print("test Padding: ", padded)
+
+# output:
+
+# word Index:  {'<OOV>': 1, 'my': 2, 'love': 3, 'dog': 4, 'i': 5, 'you': 6, 'cat': 7, 
+#				'do': 8, 'think': 9, 'is': 10, 'amazing': 11}
+
+# train Sequence:  [[5, 3, 2, 7], [5, 3, 2, 4], [6, 3, 2, 4], [8, 6, 9, 2, 4, 10, 11]]
+
+# train Padding:  [[ 0  0  0  5  3  2  7]
+# 				  [ 0  0  0  5  3  2  4]
+# 				  [ 0  0  0  6  3  2  4]
+# 				  [ 8  6  9  2  4 10 11]]
+
+# test Sequence:  [[5, 1, 3, 2, 4], [2, 4, 1, 3, 2, 1]]
+
+# test Padding:  [[0 5 1 3 2 4]
+#  				[2 4 1 3 2 1]]
