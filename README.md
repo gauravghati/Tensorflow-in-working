@@ -7,15 +7,55 @@ This repo also contains the codes of various courses based on tensorflow library
  
 ## 1) Kaggle: 
    - Titanic-1:  
-      A binary classification problem, with basic concepts of normalization by sklearn, data clearning,
-      getting stated with kaggle competetions,
-      with almost 72% accuracy.
+      A binary classification problem, with basic concepts of normalization by sklearn, data clearning,                     
+      getting stated with kaggle competetions,                         
+      with almost 72% accuracy.                            
 
 ## 2) tf_basic: 
-   - basic-intro:                                     
+   - basic-intro.ipynb:                                     
       Getting started with tf, a linear regression problem with function like model, compile, fit etc.
       
-   - fashion-minist-dataset:  
+   - fashion-minist-dataset.ipynb :  
+      Importing inbuild fashion-minist-dataset of tensorflow, a multi-label classification problem, with callback when accuracy fall below the certain value.
       
-      
+   - stop-at-limit-callback.ipynb:        
+     Stoping the epoch if the accuracy or loss reach certain limit.
+     
+## 3) nlp: 
+   - imdb-review:         
+       i) pre_trained_corpus.ipynb - pre trained subwords of the reviews and there position in subword dict as a token, using these tokens to generate sequences and the sending to the embedding layer and GlobalAveragePooling1D layer
+       ii) review.ipynb - imbd dataset in colab, concepts of tokenizers, pad_sequenc and how to download file from a google colab, generating dimentional projection files "vecs.tsv" and "meta.tsv" for projecting it.
+   - layers:                 
+       i) imdb-conv.ipynb - nlp by Convolutional layer         
+       ii) imdb-gru.ipynb - GRU implementation             
+       iii) imdb-multi-LSTM.ipynb             
+       iv) imdb-single-LSTM.ipynb         
+       v) sarcasm-LSTM.ipynb - link of sarcasm dataset is available in ipynb               
+       vi) sarcasm-conv.ipynb
+  
+   - sarcasm/sarcasm.py        
+       Concept of tokenizer, pad_sequence, and text to sequence process
+  
+  - text-sampleling - it is producing random words by giving integer/no input.                            
+       i) poetry1 - one hot vector, corpus, word index, bidirectional LSTM, given little input text then predict next few texts.                   
+       ii) poetry2 - using larger corpus to train both are with adam optimizer and categorical_crossentropy loss.
+
+  - encodingapi.py: **basic concept of word-index, corpus, tokenizer, padding and text to sequence convertion using tf**
+  
+## 4) time-series analysis and prediction
+   - time-series.ipynb:                   
+      Concepts of **Trend and Seasonality, seasonal pattern, Noise, autocorrelation**
    
+   - data-prepossing.ipynb:                      
+      Creating Windows for sending data into model for traing and forcasting the graph.
+      
+   - prediction-without-ml.ipynb:                           
+      concept of **Naive Forecast**, moving_average_forecast improving by  **seasonality differencing**.
+      
+   - simple-ann-predication.ipynb:                   
+      Concepts of windowed dataset, training on window of the graph, with optimizer SGD and loss "mse", forcasting with the simple ann model.
+      
+   - dnn-prediction.ipynb:                             
+      predicting with Deep neural networks, 2 layers of 10 neutrons, 1 linear layer at the end.
+      
+   - training with Huber() loss and.... ""taking pause will continue the documentation later, bye for now""
