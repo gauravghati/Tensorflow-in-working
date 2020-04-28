@@ -21,9 +21,17 @@ This repo also contains the codes of various courses based on tensorflow library
    - stop-at-limit-callback.ipynb:        
      Stoping the epoch if the accuracy or loss reach certain limit.
      
+   - reducing_overfit.ipynb:               
+     Comparision of tiny, small, medium and large models                 
+     then imporving large model with **L2 regularization and Dropout**                
+     Used **Early stopping as callback**
+     
+   - regression.ipynb
+     
 ## 3) nlp: 
    - imdb-review:         
-       i) pre_trained_corpus.ipynb - pre trained subwords of the reviews and there position in subword dict as a token, using these tokens to generate sequences and the sending to the embedding layer and GlobalAveragePooling1D layer
+       i) pre_trained_corpus.ipynb - pre trained subwords of the reviews and there position in subword dict as a token, using these tokens to generate sequences and the sending to the embedding layer and GlobalAveragePooling1D layer 
+       
        ii) review.ipynb - imbd dataset in colab, concepts of tokenizers, pad_sequenc and how to download file from a google colab, generating dimentional projection files "vecs.tsv" and "meta.tsv" for projecting it.
    - layers:                 
        i) imdb-conv.ipynb - nlp by Convolutional layer         
@@ -50,12 +58,23 @@ This repo also contains the codes of various courses based on tensorflow library
       Creating Windows for sending data into model for traing and forcasting the graph.
       
    - prediction-without-ml.ipynb:                           
-      concept of **Naive Forecast**, moving_average_forecast improving by  **seasonality differencing**.
+      concept of **Naive Forecast, moving_average_forecast** improving by  **seasonality differencing**.
       
    - simple-ann-predication.ipynb:                   
-      Concepts of windowed dataset, training on window of the graph, with optimizer SGD and loss "mse", forcasting with the simple ann model.
+      Concepts of **windowed dataset**, training on window of the graph, with optimizer SGD and loss "mse", forcasting with the simple ann model.
       
    - dnn-prediction.ipynb:                             
-      predicting with Deep neural networks, 2 layers of 10 neutrons, 1 linear layer at the end.
+      predicting with Deep neural networks, 2 layers of 10 neutrons, with activation="linear" layer at the end.
       
-   - training with Huber() loss and.... ""taking pause will continue the documentation later, bye for now""
+   - simple-rnn.ipynb:        
+   **Lambda Layer** and **Huber** loss and 2 layered **Simple RNN** with 40 neurons
+   
+   - LSTMs-prediction.ipynb:               
+   **Bidirectional LSTM** of 32 units
+   
+   - conv-lstm.ipynb:                  
+   **1D conv** layer with followed by birectional LSTM with SGD and momentum                
+   **LearningRateScheduler** callback
+   
+   - Sunspot Database: 
+   Conv + LSTM + NN
