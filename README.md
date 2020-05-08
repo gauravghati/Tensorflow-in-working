@@ -47,7 +47,13 @@ This repo also contains the codes of various courses based on tensorflow library
   - text-sampleling - it is producing random words by giving integer/no input.                            
        i) poetry1 - one hot vector, corpus, word index, bidirectional LSTM, given little input text then predict next few texts.                   
        ii) poetry2 - using larger corpus to train both are with adam optimizer and categorical_crossentropy loss.
-
+  
+  - tf-docs:                      
+       i) Word embedding: Sentimental classifier with IMDB dataset, **Learning embeddings from scratch, subword, wordindex**, ploting embedding graphs!                                     
+       ii) text_generation.ipynb: **character-based language generator**                                           
+       iii) nmt_with_Attention  :**BahdanauAttention** with GRU, **encoder, decoder and evaluate function for attention**   
+       iv) transformer.ipynb: machine transalation, **self-Attention, Multi head attention, Scaled dot product attention** with evaluted function, adam with lr scheduler, checkpoint callback! 
+       
   - encodingapi.py: **basic concept of word-index, corpus, tokenizer, padding and text to sequence convertion using tf**
   
 ## 4) time-series analysis and prediction
